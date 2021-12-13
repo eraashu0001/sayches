@@ -1,0 +1,8 @@
+version: "3"
+services:
+        web:
+                image: python:latest
+                container_name: demo code
+                ports:
+                        - 80:8000
+
