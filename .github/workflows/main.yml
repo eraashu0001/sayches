@@ -11,4 +11,4 @@ jobs:
     steps:
 
       - name: start docker-compose file
-        run: docker-compose up -d
+        run: docker-compose -f docker-compose.yaml up -d 
