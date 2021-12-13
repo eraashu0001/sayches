@@ -2,7 +2,11 @@ version: "3"
 services:
         web:
                 image: python:latest
-                container_name: demo code
+                working_dir: /app
+                container_name: demo_code
+                command: bash -c "pip install -r requirements.txt && python3 manage.py runserver 0.0.0.0:80 && tail -f /dev/null"
+                volumes:
+                        - "./code/:/app/"
                 ports:
                         - 80:8000
 
