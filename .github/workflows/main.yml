@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     runs-on: [self-hosted]
-    steps:
-
+    steps:    
+      - uses: actions/checkout@v2  
       - name: start docker-compose file
         run: docker-compose -f docker-compose.yaml up -d 
