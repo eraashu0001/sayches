@@ -11,8 +11,8 @@ jobs:
     steps:    
       - uses: actions/checkout@v2
       - name: pull from github
-        working-directory: ./sayches
+        working-directory: /var/www/HelloWorld/sayches
         run: sudo GIT_SSH_COMMAND="ssh -i ~/root/.ssh/runner" git pull
       - name: start docker-compose file
-        working-directory: ./sayches
+        working-directory: /var/www/HelloWorld/sayches
         run: sudo docker-compose -f docker-compose.yaml up -d 
