@@ -10,7 +10,10 @@ jobs:
     runs-on: [self-hosted]
     steps:    
       - uses: actions/checkout@v2
-      - name: pull from github
+      - name: stash the changes
+        working-directory: /var/www/HelloWorld/sayches
+        run: sudo GIT_SSH_COMMAND="ssh -i ~/root/.ssh/runner" git stash
+      - name: pull grom github
         working-directory: /var/www/HelloWorld/sayches
         run: sudo GIT_SSH_COMMAND="ssh -i ~/root/.ssh/runner" git pull
       - name: start docker-compose file
