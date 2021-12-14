@@ -11,6 +11,7 @@ jobs:
     steps:    
       - uses: actions/checkout@v2
       - name: pull from github
+        working-drectory: /home/user/g_python/sayches
         run: git pull 
       - name: start docker-compose file
         run: docker-compose -f docker-compose.yaml up -d 
