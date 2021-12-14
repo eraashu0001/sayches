@@ -8,5 +8,5 @@ services:
                 volumes:
                         - "./code/:/app/"
                 ports:
-                        - 80:8000
+                        - 80500:8000
 
